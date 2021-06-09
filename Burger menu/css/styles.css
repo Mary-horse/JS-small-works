@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#slow_nav > ul {
+  width: 400px;
+  margin: 25px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+#slow_nav > ul > li {
+  position: relative;
+  list-style-type: none;
+  padding: 0;
+  display: inline-block;
+}
+
+#slow_nav a {
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+}
+
+#slow_nav > ul > li > a {
+  font-size: 18px;
+  padding: 5px;
+  background: #333;
+  color: #fff;
+  width: 80px;
+  text-align: center;
+}
+
+#slow_nav li ul {
+  position: absolute;
+  top: 40px;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: none;
+}
+
+#slow_nav li ul li:last-child {
+  border-bottom: none;
+}
+
+#slow_nav > ul li a {
+  padding: 10px 10px;
+  display: block;
+  color: #fff;
+}
+
+#slow_nav li ul li:first-child {
+  margin-top: 25px;
+  position: relative;
+}
+
+/* измененная строка (при наведении на li, которыe находятся в ul (со значениями пункт1 и пункт2) у a меняется фон)*/
+#slow_nav ul li:hover a {
+  background-color: #333;
+}
+
+#slow_nav li ul li:first-child:before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 5px solid transparent;
+  border-bottom-color: #333;
+  left: 10px;
+  top: -10px;
+}
